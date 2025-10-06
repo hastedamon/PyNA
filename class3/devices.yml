@@ -1,0 +1,25 @@
+- cisco3:
+    device_name: cisco3
+    host: cisco3.lasthop.io
+    password: userlab01
+    username: labuser
+- cisco4:
+    device_name: cisco4
+    host: cisco4.lasthop.io
+    password: userlab01
+    username: labuser
+- arista1:
+    device_name: arista1
+    host: arista1.lasthop.io
+    password: userlab01
+    username: labuser
+- arista2:
+    device_name: arista2
+    host: arista2.lasthop.io
+    password: userlab01
+    username: labuser
+- nxos1:
+    device_name: nxos1
+    host: nxos1.lasthop.io
+    password: userlab01
+    username: labuser
