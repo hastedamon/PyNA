@@ -1,0 +1,19 @@
+{%- for vrf_color in vrf_config %}
+vrf definition {{vrf_color["vrf_name"]}}
+ rd {{vrf_color.rd_number}}
+ !
+ {%- if vrf_color.ipv4_enabled %}
+ address-family ipv4
+  route-target export {{vrf_color.rd_number}}
+  route-target import {{vrf_color.rd_number}}
+ exit-address-family
+ !
+ {%- endif %}
+ {%- if vrf_color.ipv6_enabled %}
+ address-family ipv6
+  route-target export {{vrf_color.rd_number}}
+  route-target import {{vrf_color.rd_number}}
+ exit-address-family
+ !
+ {%- endif %}
+{%- endfor %}
