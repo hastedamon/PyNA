@@ -2,7 +2,7 @@ import yaml
 import os
 import pyeapi
 
-def read_yaml(filename='arista_devices.yml'):
+def read_yaml(filename):
     with open(filename, "r") as f:
         return yaml.safe_load(f)
 
